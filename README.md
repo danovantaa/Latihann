@@ -1,2 +1,0 @@
-# Latihann
-Hanya Belajar.
