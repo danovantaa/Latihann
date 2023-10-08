@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: seagreen;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    background:black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home_content {
+    max-width: 600px;
+}
+
+.home_content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: black ;
+}
+
+.home_content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+}
+
+.home_content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home_content .btn_box {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 50px;
+    border-radius: 8px;
+    box-shadow: black;
+}
+
+.btn_box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+    background: #c02101;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #faf0de;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+
+.btn_box a:hover {
+    background-color: chocolate;
+    transform: scale(1.02);
+}
+
+.home_sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home_sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #c02101;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #c02101;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.home_sci a:hover {
+    color: #fcba12;
+}
+
+/* Ganti warna */
+.home_sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #c02101;
+    z-index: -1;
+    transition: .2s;
+}
+
+.home_sci a:hover::before {
+    width: 100%;
+}
+
+/* =============About============= */
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap ;
+}
+
+.about_col_1 {
+    flex-basis: 35%;
+}
+
+.about_col_1 img {
+    width: 100%;
+    border:2px solid #c02101;
+    border-radius: 15px ;
+}
+
+.about_col_2 {
+    flex-basis: 60%;
+}
+
+.sub_title {
+    font-size: 60px;
+    font-weight: 600;
+    color: black;
+}
+
+.tab_title {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab_links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab_links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #c02101;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: .5s;
+}
+
+.tab_links.active_links::after {
+    width: 50%;
+
+}
